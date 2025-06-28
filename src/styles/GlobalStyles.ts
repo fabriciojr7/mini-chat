@@ -18,4 +18,26 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     color: #d8d8d9;
   }
+
+  /* Scrollbar styling for Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: transparent; /* Makes the track transparent */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #262627; /* Same as background */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #3a3a3b; /* Slightly lighter on hover */
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #262627 transparent;
+  }
 `

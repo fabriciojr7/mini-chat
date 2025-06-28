@@ -23,6 +23,9 @@ export const Header = styled.header`
 `
 
 export const ContentChat = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
