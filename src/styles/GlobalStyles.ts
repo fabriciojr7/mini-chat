@@ -9,13 +9,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body{
-    background: #fafafa;
-    color: #333;
+    background: #262627;
+    color: #d8d8d9;
   }
 
   button{
     cursor: pointer;
     font-size: 1rem;
-    color: #333;
+    color: #d8d8d9;
   }
 `
