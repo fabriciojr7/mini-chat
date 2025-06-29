@@ -7,7 +7,7 @@ interface MessageProps {
 export const ContainerMessage = styled.div<MessageProps>`
   width: 100%;
   display: flex;
-  gap: 1rem;
+  gap: .5rem;
   justify-content: ${({ you }) => (you ? "end" : "start")};
 `;
 
@@ -23,16 +23,9 @@ export const MessageText = styled.div<MessageProps>`
   border-top-right-radius: 10px;
   border-bottom-left-radius: ${({ you }) => (you ? '10px': 0)};
   border-bottom-right-radius: ${({ you }) => (you ? 0: '10px')};
-  min-height: 3.5rem;
+  min-height: 3rem;
   padding: 1rem;
   font-size: 1.2rem;
-`
-
-export const AuthorPhoto = styled.div`
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  background: #262627;
 `
 
 export const AuthorName = styled.div`

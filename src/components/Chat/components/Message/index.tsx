@@ -1,24 +1,33 @@
-import { AuthorName, AuthorPhoto, ContainerMessage, MessageItem, MessageText } from "./styles";
+import { CURRENT_USER_ID } from "../../../../api/users";
+import { AuthorPhoto } from "../../../AuthorPhoto";
+import { AuthorName, ContainerMessage, MessageItem, MessageText } from "./styles";
 
 interface MessageProps {
-  you?: boolean;
+  idAuthor: number,
+  author: string
+  photo: string;
+  text: string
 }
 
-export function Message({you}: MessageProps){
+export function Message({idAuthor, author, photo, text}: MessageProps){
+  const you = idAuthor === CURRENT_USER_ID
+
   return (
     <ContainerMessage you={you}>
 
       {!you && (
-        <AuthorPhoto/>
+        <AuthorPhoto>
+          <img src={photo} alt={author} />
+        </AuthorPhoto>
       )}
 
       <MessageItem>
         <MessageText you={you}>
-          Mensagem
+          {text}
         </MessageText>
 
         {!you && (
-          <AuthorName>Autor</AuthorName>
+          <AuthorName>{author}</AuthorName>
         )}
       </MessageItem>
     </ContainerMessage>

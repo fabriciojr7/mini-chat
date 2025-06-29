@@ -15,10 +15,21 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   h1{
     font-size: 1.2rem;
     text-transform: uppercase;
+  }
+
+  div{
+    position: absolute;
+    left: 10px;
+    display: inline-flex;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
 `
 
@@ -35,13 +46,16 @@ export const ContentChat = styled.div`
 `
 
 export const Footer = styled.footer`
-  width: 100%;
-  background: #262627;
-  padding: 0.5rem;
-  border-top: 1px solid #130b0d;
-  display: flex;
-  align-items: end;
-  gap: .5rem;
+  form{
+    width: 100%;
+    height: 100%;
+    background: #262627;
+    padding: 0.5rem;
+    border-top: 1px solid #130b0d;
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+  }
 `
 
 export const InputChat = styled.input`
